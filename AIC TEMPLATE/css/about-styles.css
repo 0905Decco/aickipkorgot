@@ -1,0 +1,701 @@
+/* About Section Styles */
+
+/* Page Hero Styles */
+.page-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  padding: 4rem 0;
+  color: #fff;
+  overflow: hidden;
+  margin-top: 76px; /* Account for fixed navbar */
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(135deg, rgba(192,0,0,0.75), rgba(0,0,0,0.5)),
+    url("../assets/img/worship.jpg") center/cover no-repeat;
+  filter: contrast(1.1) saturate(1.1);
+}
+
+.page-hero .lead {
+  color: #fff !important;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+}
+
+.breadcrumb-item a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: #fff;
+}
+
+.breadcrumb-item.active {
+  color: #fff;
+}
+
+/* Mission Quote Styles */
+.mission-quote {
+  background: linear-gradient(135deg, rgba(192,0,0,0.05), rgba(0,0,0,0.05));
+  border-left: 4px solid var(--brand);
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+
+.mission-quote blockquote {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.mission-quote .blockquote-footer {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--brand), var(--accent));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--brand);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px var(--brand);
+}
+
+.timeline-content h5 {
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+/* Image Showcase Styles */
+.image-showcase {
+  position: relative;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: 400px;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.image-item:first-child {
+  grid-row: span 2;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Value Card Styles */
+.value-card {
+  background: var(--surface);
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(16,24,40,0.12);
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.value-card h5 {
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+/* Vision Goals Styles */
+.vision-goals {
+  margin-top: 2rem;
+}
+
+.goal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.goal-item:hover {
+  transform: translateX(10px);
+}
+
+.goal-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba(192,0,0,0.1), rgba(0,0,0,0.1));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.goal-content h5 {
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+.goal-content p {
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+/* Vision Quote Styles */
+.vision-quote {
+  background: linear-gradient(135deg, rgba(192,0,0,0.05), rgba(0,0,0,0.05));
+  padding: 2rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.vision-quote blockquote {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.vision-quote .blockquote-footer {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Vision Stats Styles */
+.vision-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Leadership Message Styles */
+.leadership-message {
+  background: var(--surface);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.message-header h2 {
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.message-content blockquote {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.message-content .blockquote-footer {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Leadership Card Styles */
+.leadership-card {
+  background: var(--surface);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.leadership-photo {
+  margin-bottom: 2rem;
+}
+
+.leadership-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid var(--brand);
+}
+
+.leadership-info h3 {
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+.leadership-info h5 {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.leadership-info blockquote {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.leadership-info .blockquote-footer {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Pastor Card Styles */
+.pastor-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.pastor-card:hover {
+  transform: translateY(-5px);
+}
+
+.pastor-photo img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid var(--brand);
+}
+
+.pastor-info h4 {
+  color: var(--brand);
+  margin-bottom: 0.25rem;
+}
+
+.pastor-info h6 {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.pastor-info p {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.pastor-contact {
+  padding-top: 1rem;
+  border-top: 1px solid var(--neutral-100);
+}
+
+/* Department Card Styles */
+.department-card {
+  background: var(--surface);
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+}
+
+.department-photo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid var(--brand);
+  margin-bottom: 1rem;
+}
+
+.department-info h5 {
+  color: var(--brand);
+  margin-bottom: 0.25rem;
+}
+
+.department-info h6 {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.department-info p {
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+/* Value Item Styles */
+.value-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.value-item .value-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.value-item h5 {
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.value-item p {
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+/* Contact Item Styles */
+.contact-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.contact-item h6 {
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* Gallery Filter Styles */
+.gallery-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid var(--brand);
+  color: var(--brand);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* Gallery Masonry Styles */
+.gallery-masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-link img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-link:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(192,0,0,0.8), rgba(0,0,0,0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-link:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-info {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.gallery-info h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-info p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+/* Share Item Styles */
+.share-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.share-item i {
+  font-size: 2rem;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.share-item h6 {
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+.share-item p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 30vh;
+    padding: 2rem 0;
+  }
+  
+  .image-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .image-item:first-child {
+    grid-row: span 1;
+  }
+  
+  .vision-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-masonry {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-filter {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-marker {
+    left: -1.5rem;
+  }
+  
+  .goal-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .goal-item:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .mission-quote,
+  .vision-quote,
+  .leadership-message {
+    padding: 1.5rem;
+  }
+  
+  .leadership-card {
+    padding: 2rem 1rem;
+  }
+  
+  .pastor-card {
+    padding: 1.5rem;
+  }
+  
+  .department-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .value-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Button Styles */
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.cta-buttons .btn {
+  margin: 0.5rem;
+}
+
+/* Additional Utility Classes */
+.text-brand {
+  color: var(--brand) !important;
+}
+
+.bg-brand {
+  background-color: var(--brand) !important;
+}
+
+.border-brand {
+  border-color: var(--brand) !important;
+}
