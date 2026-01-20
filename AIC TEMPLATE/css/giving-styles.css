@@ -23,6 +23,10 @@
   filter: contrast(1.1) saturate(1.1);
 }
 
+.page-hero h1 {
+  color: #fff !important;
+}
+
 .page-hero .lead {
   color: #fff !important;
 }
